@@ -78,9 +78,6 @@ for(std::map<FlowId,FlowMonitor::FlowStats>::const_iterator i=stats.begin();i!=s
 Ipv4FlowClassifier::FiveTuple t=classifier->FindFlow(i->first);
 std::cout<<"t.sourceAddress="<<t.sourceAddress<<"t.destinationAddress="<<t.destinationAddress<<"Source port:"<<t.sourcePort<<" "<<"Destination port:"<<t.destinationPort<<"\n";
 
-if((t.sourceAddress=="10.1.1.1" && t.destinationAddress=="10.1.1.2"))
-{
-std::cout<<"Flow"<<i->first<<"("<<t.sourceAddress<<"t.destinationAddress="<<t.destinationAddress<<" Source port:"<<t.sourcePort<<" "<<"Destination port:"<<t.destinationPort<<"\n";
 if ((t.sourceAddress=="10.1.1.1" && t.destinationAddress == "10.1.1.2"))
 
  {
@@ -93,7 +90,7 @@ if ((t.sourceAddress=="10.1.1.1" && t.destinationAddress == "10.1.1.2"))
  std::cout << " Throughput: " << i->second.rxBytes * 8.0 / 9.0 / 1000 / 1000 << "Mbps\n";
  }
  }
-}
+
  monitor->SerializeToXmlFile("lab-1.flowmon", true, true);
  Simulator::Destroy ();
  NS_LOG_INFO ("Done.");
@@ -101,7 +98,6 @@ if ((t.sourceAddress=="10.1.1.1" && t.destinationAddress == "10.1.1.2"))
 
 /*OUTPUT
 t.sourceAddress=10.1.1.1t.destinationAddress=10.1.1.2Source port:49153 Destination port:8000
-Flow1(10.1.1.1t.destinationAddress=10.1.1.2 Source port:49153 Destination port:8000
 Flow 1 (10.1.1.1 -> 10.1.1.2)
  Tx Bytes: 168320
  Rx Bytes: 168320
