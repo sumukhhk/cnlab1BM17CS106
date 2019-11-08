@@ -37,3 +37,16 @@ unlink(FIFO1);
 close(writefd);
 unlink(FIFO2);
 }
+
+/*OUTPUT
+bmsce@bmsce-Precision-T1700:~$ gcc serverfifo.c -o serverfifo.o
+bmsce@bmsce-Precision-T1700:~$ ./serverfifo.o
+Waiting for connection request..
+Connection Established..
+Client has requested file 9a.cpp
+bmsce@bmsce-Precision-T1700:~$ ./serverfifo.o
+Waiting for connection request..
+Connection Established..
+Client has requested file 9aa.cpp
+bmsce@bmsce-Precision-T1700:~$ 
+*/
