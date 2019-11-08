@@ -26,3 +26,16 @@ close(readfd);
 close(writefd);
 return 0;
 }
+
+/*OUTPUT
+bmsce@bmsce-Precision-T1700:~$ ./clientfifio.o
+Trying to connect to server..
+Connected..
+Enter the filename to request from server:IPCFIFOTEXT
+Waiting for server to reply..
+HELLO WORLD
+THIS IS A TEST FILE FOR IPC FIFO PROGRAM OF CN LAB
+HOPE YOU ARE GETTING IT RIGHT
+ENJOY
+bmsce@bmsce-Precision-T1700:~$ 
+*/
