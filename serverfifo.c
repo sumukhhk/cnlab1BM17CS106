@@ -47,6 +47,6 @@ Client has requested file 9a.cpp
 bmsce@bmsce-Precision-T1700:~$ ./serverfifo.o
 Waiting for connection request..
 Connection Established..
-Client has requested file 9aa.cpp
+Client has requested file IPCFIFOTEXT
 bmsce@bmsce-Precision-T1700:~$ 
 */
